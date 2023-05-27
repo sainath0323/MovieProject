@@ -1,0 +1,12 @@
+package com.sai.movie;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MovieService {
+
+	public String savePicture(MovieEntity movieEntity) {
+		return null;
+	}
+
+}

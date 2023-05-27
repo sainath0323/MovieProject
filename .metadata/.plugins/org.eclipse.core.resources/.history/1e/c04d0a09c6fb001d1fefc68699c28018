@@ -1,0 +1,13 @@
+package com.sai.movie;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity(name = "movie_info")
+@Data
+public class MovieEntity {
+	private String movieName;
+	private String heroName;
+	private String heroineName;
+
+}

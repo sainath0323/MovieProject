@@ -1,0 +1,31 @@
+package com.sai.movie;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import jakarta.validation.Valid;
+
+@Service
+public class MovieService {
+
+	@Autowired 
+	MovieRepository movieRepository;
+	
+	public String savePicture(@Valid MovieEntity movieEntity) {
+		return movieRepository.save(movieEntity)!=null ?"Movie saved Successfully":"Movie failed to save";
+}
+
+	public List<MovieEntity> getMovies() {
+		return movieRepository.findAll();
+	}
+
+	public List<String> getMovieNames() {
+		return movieRepository.listOfMovieNames();
+	}
+
+	public MovieEntity getMovie(String moviename) {
+		return null;
+	}
+}

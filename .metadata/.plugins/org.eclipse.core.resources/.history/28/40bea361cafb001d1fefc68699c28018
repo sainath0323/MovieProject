@@ -1,0 +1,25 @@
+package com.sai.movie;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity(name = "movie_info")
+@Data 
+@AllArgsConstructor
+@NoArgsConstructor
+public class MovieEntity {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer movieId;
+	private String movieName;
+	private String heroName;
+	private String heroineName;
+	private String directorName;
+	private String cameramanName;
+	private String musicDirector;
+}

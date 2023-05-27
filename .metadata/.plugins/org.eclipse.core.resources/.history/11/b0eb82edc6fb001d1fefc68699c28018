@@ -1,0 +1,19 @@
+package com.sai.movie;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity(name = "movie_info")
+@Data 
+@AllArgsConstructor
+@NoArgsConstructor
+public class MovieEntity {
+	private String movieName;
+	private String heroName;
+	private String heroineName;
+	private String directorName;
+	private String cameramanName;
+	private String musicDirector;
+}

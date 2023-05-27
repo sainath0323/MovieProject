@@ -1,0 +1,20 @@
+package com.sai.movie;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MovieService {
+
+	@Autowired 
+	MovieRepository movieRepository;
+	
+	public String savePicture(MovieEntity movieEntity) {
+	if(movieRepository.save(movieEntity)!=null) {
+		return "Movie saved Successfully";
+	}
+	else
+		return "Movie failed to save";
+	}
+
+}
